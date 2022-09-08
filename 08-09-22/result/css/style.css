@@ -1,0 +1,10 @@
+.actor{
+    color: blueviolet;
+    border: 1px solid;
+    width: max-content;
+}
+.fav{
+    color: aqua;
+    background-color: orangered;
+    width: fit-content;
+}

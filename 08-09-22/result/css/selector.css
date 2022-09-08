@@ -1,0 +1,10 @@
+.parent .parent-1 .p1-child-1 .child-1-head{
+     color:blue;
+       }
+   .parent .parent-1 .p1-child-1 .child-1-head2{
+    color:orange;
+    text-decoration: underline;
+   }   
+   .parent .parent-1 .p1-child-2 .pic{
+    border-color: aliceblue;
+   } 
