@@ -1,0 +1,21 @@
+.main{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    right: 0;
+    bottom: 0;
+    border: 1px solid black;
+}
+.sub{
+   
+    right: 0;
+    bottom:0;
+    padding: 20px;
+    border: 2px solid black;
+}
+.nn{
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
