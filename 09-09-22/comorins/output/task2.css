@@ -1,0 +1,11 @@
+
+.main {
+    width: 1200px;
+}
+.child{
+    display:inline-block;
+    background-color:pink;
+    border: 2px solid skyblue;
+    height: 80%;
+    width: 7.6%;
+}

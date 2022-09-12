@@ -10,13 +10,13 @@
     width: 25%;
     height: 25%;
     background-color: rgb(226, 112, 19);
-    opacity: 5;
-}
+    
+   }
 .box2{
     position:absolute ;
     right: 0%;
     top: 0%;
-    border: 2px solid rgb(116, 111, 111); ;
+    border: 2px solid rgb(116, 111, 111); 
     width: 25%;
     height: 25%;
     background-color: rgb(224, 12, 243);
@@ -25,7 +25,7 @@
     position:absolute ;
     left: 0%;
     bottom: 0%;
-    border: 2px solid rgb(116, 111, 111); ;
+    border: 2px solid rgb(116, 111, 111); 
     width: 25%;
     height: 25%; 
     background-color: rgb(8, 8, 199);
@@ -34,17 +34,18 @@
     position:absolute ;
     right: 0%;
     bottom: 0%;
-    border: 2px solid rgb(116, 111, 111); ;
+    border: 2px solid rgb(116, 111, 111); 
     width: 25%;
     height: 25%;
     background-color: rgb(23, 172, 231); 
 }
 .box5{
     position:absolute ;
-    right: 40%;
-    top: 35%;
-    border: 2px solid rgb(116, 111, 111); ;
+    border: 2px solid rgb(116, 111, 111); 
     width: 25%;
     height: 25%;
     background-color: rgb(69, 197, 69);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
