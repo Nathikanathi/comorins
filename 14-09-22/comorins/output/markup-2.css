@@ -1,0 +1,50 @@
+h1{
+    color: white;
+    font-size:30px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(41, 38, 38);
+    border: 2px solid rgb(41, 38, 38);
+}
+nav{
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+section{
+    background-color: white;
+    margin-top: 20px;
+}
+h2{
+    text-align: center;
+    padding: 100px 0px;
+}
+h3{
+    text-align: center;
+    padding: 8px 0px; 
+}
+.parent{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.c1{
+    background-color: #00000045;
+    width: 50%;
+    display: inline-block;
+}
+.c2{
+        background-color: #00000045;
+        width: 30%;
+        display: inline-block;
+}
+footer{
+    color:white;
+    background-color: black;
+    
+    text-align: center;
+    font-size:30px;
+}

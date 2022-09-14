@@ -1,0 +1,59 @@
+body{
+    margin: 60px;
+    background-color: rgb(182, 174, 174);
+}
+h1{
+    color: white;
+    text-align: center; 
+}
+.wrapper{
+    background-color: pink;
+
+}
+.wrapper li{
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 98px;
+}
+
+.wrapper ul{
+    display: inline-block;
+}
+input{
+    margin-left: 18px;
+}
+.main{
+    margin: 16px 0px;
+   
+}
+.sub1{
+    background-color: white;
+    width:77%;
+    display: inline-block;
+    margin-right: 12px;
+}
+.sub2{
+    background-color: pink;
+    width: 21.5%;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 137px;
+}
+
+p{
+    margin-left: 14px;
+}
+h2{
+    text-align: center;
+}
+h3{
+    margin-left: 14px;  
+}
+.sub2 li{
+    text-decoration: underline;
+    color: blue;
+}
+footer{
+    background-color: white;
+    padding: 22px;
+}
