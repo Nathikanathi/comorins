@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+@media(max-width:1200px){
+.parent .child{
+    width: 22%;
+    display: inline-block;
+    background-color: bisque;
+    padding: 10px;
+}
+}
+
+@media(max-width:991px){
+    .parent .child{
+        width: 47%;
+       
+    }
+    }
+ @media(max-width:767px){
+    .parent .child{
+            width: 99%;
+            display: block;
+
+        }
+        }
+        
+
+/* @media(max-width:575px){
+    .parent{
+        width: 25%;
+        display:block;
+    }
+    }*/

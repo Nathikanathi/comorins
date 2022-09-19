@@ -1,0 +1,23 @@
+.parent{
+    background-color: blueviolet;
+}
+@media(min-width:575px) {
+    .parent{
+        background-color: red;
+    }
+}
+@media(min-width:767px) {
+    .parent{
+        background-color: green;
+    }
+}
+@media(min-width:991px) {
+    .parent{
+        background-color: blue;
+    }
+}
+@media(min-width:1200px) {
+    .parent{
+        background-color: orange;
+    }
+}
