@@ -1,0 +1,35 @@
+
+.box{
+    color: white !important;
+}
+.img-section{
+    padding: 10px 0px 134px 10px;
+    background-color: gray;
+}
+.firstcolumn{
+    margin: 20px;
+    background-color: white;
+    padding: 10px;
+}
+.secondcolumn{
+    background-color: white;
+    margin: 15px;
+    padding: 10px;
+}
+.thirdcolumn{
+    background-color: white;
+    padding: 10px;
+    margin: 15px;
+}
+.img-2{
+    background-color: gray;
+    padding: 10px 0px 58px 5px;
+}
+.fourthcolumn{
+    background-color: white;
+    margin: 15px;
+    padding: 10px;
+}
+.foot{
+    padding: 10px;
+}

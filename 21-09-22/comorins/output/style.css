@@ -1,0 +1,22 @@
+header{
+    background-color: rgb(75, 72, 72);
+    padding: 40px;
+}
+nav{
+    background-color: rgb(199, 196, 196);
+    padding: 10px;
+}
+.sub1{
+    background-color: #80808038;
+    padding: 209px;
+    
+}
+.sub2{
+    background-color: #5e5c5c38;
+    padding: 200px;
+
+}
+footer{
+    background-color: gray;
+    padding: 20px;
+}

@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@media(min-width:991px){
+   /*header section starts here*/
+/* navigation sction starts here*/
+nav{
+    display: table;
+}
+nav img{
+    margin: 17px 140px 18px 69px;
+}
+nav ul{
+    color: #494D56;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 12px 0px 15px 0px;
+}
+nav li{
+    display: inline-block;
+    margin-left: 14px;
+}
+nav li:last-child{
+    background-color: red;
+    color: white;
+    padding: 11px;
+    border-radius: 10px;
+    margin: 40px 87px 49px 30px;
+}
+/*navigattion section ends here*/ 
+
+.main{
+    background-image: url(responsive-images/bacground-img.png);
+}
+.head1{
+    width:50%;
+    display: inline-block;
+}
+.head1 h1{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 55px;
+    margin: 125px 66px 39px 69px;
+}
+.head1 p{
+    margin: 0px 60px 76px 69px;
+}
+.head2{
+   
+    display: inline-block;
+}
+.main1{
+    background-color: black;
+    display: table;
+    width: 100%;
+}
+.main1 img{
+    margin: 43px 33px 43px 153px;
+}
+.main1 p{
+    color: white;
+    display: table-cell;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    vertical-align: middle;
+}
+/*header section ends here*/
+}
+@media(min-width:1200px){
+
+/*header section starts here*/
+/* navigation sction starts here*/
+nav{
+    display: table;
+}
+nav img{
+    margin: 17px 194px 18px 69px;
+}
+nav ul{
+    color: #494D56;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 12px 0px 15px 0px;
+}
+nav li{
+    display: inline-block;
+    margin-left: 65px;
+}
+nav li:last-child{
+    background-color: red;
+    color: white;
+    padding: 11px;
+    border-radius: 10px;
+    margin: 40px 87px 49px 30px;
+}
+/*navigattion section ends here*/
+
+.main{
+    background-image: url(responsive-images/bacground-img.png);
+}
+.head1{
+    width:50%;
+    display: inline-block;
+}
+.head1 h1{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 55px;
+    margin: 125px 66px 39px 69px;
+}
+.head1 p{
+    margin: 0px 224px 76px 69px;
+}
+.head2{
+   
+    display: inline-block;
+}
+.main1{
+    background-color: black;
+    display: table;
+    width: 100%;
+}
+.main1 img{
+    margin: 43px 33px 43px 153px;
+}
+.main1 p{
+    color: white;
+    display: table-cell;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    vertical-align: middle;
+}
+/*header section ends here*/
+/* section starts here*/
+section{
+    background-color: #F5F5F5;
+}
+section ul{
+    display: inline-block;
+    margin: 50px 0px 20px 60px;
+}
+section li{
+    display: inline-block;
+    padding: 10px 37px 11px 37px;
+    background-color: gray;
+    border-radius: 10px;
+    margin: 16px;
+}
+section li:first-child{
+    background-color: red;
+}
+section .search{
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 504px;
+    border-color: #80808033;
+}
+section .li .input{
+    padding: 8px;
+    border-radius: 6px;
+}
+.parent{
+    width: 90%;
+    margin: 0 auto;
+}
+.table1{
+    width: 22%;
+    background: #FCFCFC;
+    margin: 12px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.table1 img{
+    width: 100%;
+}
+.table2 .subtable{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 18px;
+    padding: 13px;
+}
+.table2 .subtable1{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 13px;
+}
+/*section ends here*/
+/*footer section starts here*/
+.main-footer{
+    background-color: #494D56;
+    padding: 50px 50px 70px 50px;
+}
+.foot1{
+    display: inline-block;
+    width: 50%;
+    margin-left: 60px;
+}
+.foot1 button{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #cbbf32;
+    color: white;
+    border: none;
+}
+.foot-ul{
+    display: inline-block;
+    color: white;
+    column-count: 3;
+}
+.foot-li{
+    display: inline-block;
+    column-count: 3;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+.foot2{
+    float: right;
+    margin-top: 20px;
+    margin-right: 125px;
+}
+.foot2 p{
+    color: white;
+}
+.foot-img{
+    margin: 5px;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.foot3{
+    background-color: black;
+    padding: 21px;
+    display: table;
+    width: 100%;
+}
+.foot3 p{
+    color: white;
+    display: table-cell
+}
+
+.foot3 ul{
+    color: white;
+    
+}
+.foot3 li{
+    display: inline-block;
+    margin-left: 35px;
+}
+
+}  
