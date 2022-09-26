@@ -150,7 +150,7 @@ section ul{
     display: inline-block;
     margin: 50px 0px 20px 60px;
 }
-section li{
+section .sec-li{
     display: inline-block;
     padding: 10px 37px 11px 37px;
     background-color: gray;
@@ -161,15 +161,24 @@ section li:first-child{
     background-color: red;
 }
 section .search{
-    padding: 10px;
     border-radius: 8px;
     margin-left: 504px;
     border-color: #80808033;
+    display: inline-block;
+    position: relative;
 }
-section .li .input{
-    padding: 8px;
-    border-radius: 6px;
+.search input{
+    padding: 10px;
+    border-radius: 8px;
+    border: solid 1px gray;
 }
+.search img{
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    bottom: 0;
+}
+
 .parent{
     width: 90%;
     margin: 0 auto;

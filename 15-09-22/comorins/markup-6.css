@@ -6,12 +6,11 @@
     display: table;
     width: 100%;
 }
-img{
+.parent img{
     display: table-cell;
     
     width: 218px;
-    padding: 10px;
-
+    padding: 26px 10px 37px 100px;
 }
 p{
     margin-right: 25px;
@@ -20,12 +19,19 @@ p{
     display: table-cell;
     text-align: right;
     vertical-align: middle;
+    padding: 75px 60px 52px 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+
+    color: #000000;
 }
 nav ul{
     text-align: center;
     background-color:#333333;
-    padding-top:48px; 
-    padding-bottom: 49px;
+    padding: 48px 52px 49px 52px;
 }
  nav li{
     padding-left: 43px;
@@ -38,7 +44,9 @@ nav ul{
     color: #fffefe;
 }
 .main{
-     background-color: #F3F2EE;
+    margin: 0 auto;
+    background-color: #F3F2EE;
+    width: 96%;
     
 }
 .sub2{
@@ -49,42 +57,113 @@ nav ul{
     margin-top: 295px;
 }
 
-.sub .h2{
+.sub h2{
     font-family: Roboto;
-font-size: 38px;
-font-weight: 400;
-line-height: 45px;
-font-style: normal;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 45px;
+    font-style: normal;
 
 }
 .main .sub{
     display: inline-block;
-    width: 30%;
+    width: 27%;
+    padding: 72px 77px 12px 0px;
 }
-h4{
-    color: green;
+.sub p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 153.19%;
+    color: #000000;
+
 }
-.sub1 img{
+.sub p:last-child{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 153.19%;
+    color: #6D9D34;
+}
+.sub img{
+    border: 1px solid #6F6C6C;
+    padding: 12px;
+}
+.sub1 .sub1-img{
     display: inline-block;
-    
-    width:183px;
-    Height:152px;
+    padding: 101px 10px 130px 42px;
 }
 .sub2 h4{
     color: #8F8F8F;
     Font-size: 43px;
 
 }
+.sub2{
+    margin-top: 100px;
+}
 .sub2-1{
-    width: 50%;
-    display: inline-block;
-    vertical-align: top;
+    margin: 72px 20px 42px 44px;
 }
-.sub2-2{
-width: 30%;
-display: inline-block;
+.sub2-1 img{
+    float: left;
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 10px;
 }
+.sub2-1 .para{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 118.19%;
+    color: #8F8F8F;
+     
+}
+.sub2-1 p{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 118.19%;
+color: #8F8F8F;
 
+}
+.main2 h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 153.19%;
+    color: #8F8F8F;
+}
+.sub3{
+    margin: 33px 2px 44px 2px;
+}
+.sub3 img{
+    float: left;
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.sub3 .para1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 169.19%;
+    color: #707070;
+}
+.sub3 p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 153.19%;
+    color: #6D9D34;
+
+}
 .main1{
     width: 63%;
     display: inline-block;
@@ -97,33 +176,76 @@ display: inline-block;
 
 }
 
-.image1{
-    display: inline-block;
-    width: 105px;
-    height: 145px;
+.main3{
+    background-color: #333333;
+    padding: 15px;
 }
-.sub4 h2{
+.main3 h2{
     Font-family: Roboto;
-Font-style:Regular;
-Font-size:43px;
-Line-height:66px;
-Line-height: 153%;
-vertical-align:Top;
+    Font-style:Regular;
+    Font-size:43px;
+    Line-height:66px;
+    Line-height: 153%;
+    color: #B1B1B1;
+    vertical-align:Top;
 }
-.sub4-1{
-    width: 45%;
+.sub4 img{
+    float: left;
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.sub5{
+    width: 35%;
     display: inline-block;
-    vertical-align: top;
-}
-.sub4-2{
-    width: 42%;
-    display: inline-block;
-}
-.main4{
-    width: 100%;
 }
 .sub4{
-    width:33%;
+    width:38%;
     vertical-align: top;
     display: inline-block;
+    margin: 16px;
+}
+.sub4 p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 109.19%;
+    color: #FFFFFF;
+
+}
+.sub5 .image1{
+    margin: 26px 16px;
+}
+.sub6{
+    display: inline-block;
+    vertical-align: top;
+}
+.sub6 li{
+    list-style: none;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 195.19%;
+color: #FFFFFF;
+
+}
+footer{
+    background-color: #777777;
+    padding: 15px;
+    display: table;
+    width: 97.69%;
+}
+footer p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 195.19%;
+    color: #D7E8B9;
+}
+footer p:last-child{
+    display: table-cell;
+
 }
