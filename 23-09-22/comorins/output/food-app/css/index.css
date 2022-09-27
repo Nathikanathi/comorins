@@ -5,7 +5,6 @@
 @media(min-width:1200px){
     /*header section starts here*/
     .fudo-logo{
-        margin-left: 30px;
         width: 15%;
     }
     .fudo-li{
@@ -19,14 +18,17 @@
 
     }
     .fudo-li:last-child{
-        margin-left: 380px;
+        margin-left: 200px;
+        background-color: #EB5757;
+        padding: 15px 47px 1px 34px;
+        border-radius: 30px;
+    }
+    .fudo-li p{
+        color:  #F2F2F2;
     }
        
     /*header section ends here*/
     /*baner section starts here*/
-    .baner-section{
-        padding: 0px 144px;
-    }
     .baner1{
         display: inline-block;
         width: 49%;
@@ -71,33 +73,27 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 22px;
-        text-align: center;
         letter-spacing: 0.16em;
         color: #EB5757;
     }
-    .head1 p:last-child{
+    .head1 p{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
         font-size: 45px;
         line-height: 60px;
-        text-align: center;
         color: #333333;
     }
     .head1{
         margin: 100px 0px;
     }
-    .section-1 img{
-        margin-left: 75px;
-        margin-bottom: 30px;
-    }
+    
     .section-1 h3{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
         font-size: 28px;
         line-height: 70px;
-        text-align: center;
         color: #000000;
     }
     .section-1 p{
@@ -106,38 +102,11 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 30px;
-        text-align: center;
-        color: #333333;
-    }
-    .section-2 img{
-        margin-left: 57px;
-    }
-    .section-2 h3{
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 70px;
-        color: #000000;
-        text-align: center;
-    }
-    .section-2 p{
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 30px;
-        text-align: center;
         color: #333333;
     }
      /*section ends here*/
-    .pizza1 img{
-        margin-left: 60px;
-    }
+
     .pizza{
-        justify-content: center;
-    }
-    .pizza2{
         justify-content: center;
     }
     .pizza2 img{
@@ -215,7 +184,14 @@
         padding: 10px;
         border: 1px solid #BDBDBD;
     }
-    
+    .foot-end{
+        margin: 0 auto;
+    }
+    .foot-end1 p{
+        padding: 10px;
+        border: 1px solid #BDBDBD;
+        border-radius: 50px;
+    }
     /*footer section ends here*/
 
 }

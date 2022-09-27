@@ -5,7 +5,6 @@
 @media(min-width:1200px){
     /*header section starts here*/
     .fudo-logo{
-        margin-left: 30px;
         width: 15%;
     }
     .fudo-li{
@@ -19,19 +18,28 @@
 
     }
     .fudo-li:last-child{
-        margin-left: 380px;
+        margin-left: 200px;
+        background-color: #EB5757;
+        padding: 15px 47px 1px 34px;
+        border-radius: 30px;
+    }
+    .fudo-li p{
+        color:  #F2F2F2;
     }
        
     /*header section ends here*/
     /*baner section starts here*/
     section{
         background-color:#ff470029;
-        margin: 50px;
         border-radius: 10px;
+    }
+    .baner{
+        align-items: center;
+        padding: 39px 71.06px 40px 98px;
     }
     .baner1{
         display: inline-block;
-        margin: 107px 165px 98px 98px;
+       
     }
     .baner1 p:first-child{
         font-family: 'Poppins';
@@ -76,10 +84,13 @@
         vertical-align: bottom;
     }
     .baner2 img{
-        width: 225%;
+        width: 100%;
     }
     /*baner section ends here*/
     /*div section starts here*/
+    .sub1 img{
+        width: 100%;
+    }
     .sub2{
         margin-top: 150px;
     }
@@ -147,8 +158,8 @@
         padding: 10px;
     }
     /*div section ends here*/
-    /*footer section starts here*/
-    .foot1 p{
+  /*footer section starts here*/
+  .foot1 p{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
@@ -218,6 +229,13 @@
         padding: 10px;
         border: 1px solid #BDBDBD;
     }
-    
+    .foot-end{
+        margin: 0 auto;
+    }
+    .foot-end1 p{
+        padding: 10px;
+        border: 1px solid #BDBDBD;
+        border-radius: 50px;
+    }
     /*footer section ends here*/
 } 

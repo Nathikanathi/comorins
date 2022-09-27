@@ -4,16 +4,17 @@
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <header>
              <!--header section starts here-->
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="fudo-logo navbar-brand" href="#">
-                    <img src="images/fudo-logo.png" width="50" height="50" alt="">
+                    <img src="images/fudo-logo.png" width="50" height="50">
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,22 +33,24 @@
                     <li class="fudo-li nav-item active">
                         <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
                     </li>
-                     <li class="fudo-li"><img src="images/login-logo.png"></li>
+                     <li class="fudo-li"><p><img src="images/login-logo.png">login</p></li>
                 </div>
               </nav>
         </header>
         <!--header section ends here-->
         </header>
         <!--section starts here-->
-        <section>
-            <div class="baner1">
-            <p>DOWNLOAD APP</p><br>
-            <h4>Get Started With <br> Fudo Today!</h4>
-            <p>Discover food wherever and whenever and get <br> your food delivered quickly.</p><br><br>
-            <button>Get The App</button>
-            </div>
-            <div class="baner2">
-                <img src="images/sec-img2.png"/>
+        <section class="container">
+            <div class="baner row">
+                <div class="baner1 col-6">
+                    <p>DOWNLOAD APP</p>
+                    <h4>Get Started With Fudo Today!</h4>
+                    <p>Discover food wherever and whenever and get your food delivered quickly.</p>
+                    <button>Get The App</button>
+                </div>
+                <div class="baner2 col-6">
+                    <img src="images/sec-img2.png"/>
+                </div>
             </div>
         </section>
         <!--section ends here-->
@@ -57,8 +60,8 @@
             </div>
             <div class="sub2 col-6">
                 <p>WHAT THEY SAY</p>
-                <h3>What Our Customers <br> Say About Us</h3><br>
-                <p>“Fudo is the best. Besides the many and delicious <br> meals, the service is also very good, especially in <br> the very  fast delivey. I highly recommend Fudo <br> to you”.</p><br>
+                <h3>What Our Customers Say About Us</h3>
+                <p>“Fudo is the best. Besides the many and delicious meals, the service is also very good, especially in the very  fast delivey. I highly recommend Fudo  to you”.</p>
                 <div class="sub-div1">
                     <img src="images/review-lady.png"/>
                 </div>
@@ -106,11 +109,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="foot3 col-4">
-                    <h4>Get in Touch</h4>
-                    <p>Question or feedback?</p>
-                    <p>We’d love to hear from you</p>
-                    <button>Email Address</button>
+                <div class="foot3 col-4 d-flex">
+                    <div class="foot-end">
+                        <h4>Get in Touch</h4>
+                        <p>Question or feedback?</p>
+                        <p>We’d love to hear from you</p>
+                        <div class="foot-end1">
+                            <p>Email Address <img src="images/foot-end.png"/></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
