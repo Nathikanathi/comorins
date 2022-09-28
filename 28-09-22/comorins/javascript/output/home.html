@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <button onclick="add()">add</button>
+    <input id=items type="text">
+    <button onclick="get()">add items</button>
+    <ul id="tudoo"></ul>
+</body>
+<script>
+    function add(){
+        let a=document.getElementById("num1").value;
+        let b=document.getElementById("num2").value;
+        let c=Number(a)+Number(b);
+        alert(c);
+    }
+    let list=[];
+    function get(){
+        let todo=document.getElementById("items").value;
+        list.push(todo);
+        display(list);
+        document.getElementById("items").value="";
+        console.log(list);
+       
+    }
+    
+    function display(list_arr){
+    let element="";
+    for(let i=0;i<list_arr.length;i++){
+        element=element+"<li>"+list_arr[i]+"</li>";
+    }
+    document.getElementById("tudoo").innerHTML=element;
+    }
+    
+</script>
+</html> 

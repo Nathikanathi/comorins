@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+</body>
+<script>
+    let resume={
+               name:"nathika",
+               hobby:["dancing","painting","gardening"],
+               education:[
+                            {
+                            study:"sslc",
+                            institute:"joseph's convent hss",
+                            mark_p:95
+                            },
+                            {
+                            study:"hsc",
+                            institute:"joseph's convent hss",
+                            mark_p:85   
+                            },
+                            {
+                            study:"bsc",
+                            institute:"wcc",
+                            mark_p:95
+                            }
+                        ],
+               personal_details:{email:"anithasekar56@gmail.com",
+                               phone:2456789019,
+                               family_details:{
+                                                   father:"sekar",
+                                                   mother:"anitha",
+                                                   siblings:"one sister"},
+                               address:{
+                                           door_no:"2/98",
+                                           street:"kamarajar street",
+                                           place:"thellanthi"
+                                        }                 
+                               },
+               skils:["html","c++"],
+               certification:"PGDCT",
+               experience:{
+                           flow:"3 year",
+                           comorins:"5 year"
+                           },
+                language_known:["tamil","english"],
+               }
+               
+               for(let i=0;i<resume.education.length;i++){
+                console.log(resume.education[i].institute);
+
+           }
+              let total=0;
+              let count=0;
+             for(let i=0;i<resume.education.length;i++){
+                if(resume.education[i].study!=sslc){}
+                let p=resume.education[i].mark_p;
+                total=total+p;
+
+             }
+             console.log(total/3);
+              
+</script>
+</html> 
