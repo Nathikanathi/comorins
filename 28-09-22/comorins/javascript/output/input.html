@@ -59,12 +59,16 @@
               let total=0;
               let count=0;
              for(let i=0;i<resume.education.length;i++){
-                if(resume.education[i].study!=sslc){}
-                let p=resume.education[i].mark_p;
-                total=total+p;
+                if(resume.education[i].study!="sslc"){
+                    total=total+resume.education[i].mark_p;
+                    count++;
+                }
+               
+        
 
              }
-             console.log(total/3);
+             let percentage =total/count;
+             console.log(percentage);
               
 </script>
 </html> 
