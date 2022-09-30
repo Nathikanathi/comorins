@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function evalNumber(a,b,symbol){
+        if(symbol=="+"){
+            c=a+b;
+            console.log(c);
+        } 
+        else if(symbol=="-"){
+            c=a-b;
+            console.log(c);
+        }
+        else if(symbol=="*"){
+            c=a*b;
+            console.log(c);
+        } 
+        else if(symbol=="/"){
+            c=a/b;
+            console.log(c);
+        } 
+        else if(symbol=="%"){
+            c=a%b;
+            console.log(c);
+        } 
+        else{
+            console.log("invalid operation");
+        }
+    }
+    evalNumber(2,4,"*");
+    evalNumber(12,4,"/");
+    evalNumber(78,3,"+");
+    evalNumber(24,42,"%");
+    evalNumber(2,4,">");
+
+</script>
+</html>

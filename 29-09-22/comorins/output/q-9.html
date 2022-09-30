@@ -10,15 +10,15 @@
     
 </body>
 <script>
-    function checkInRange(num,initial_point,ending_point){
-        
-        if(num>=initial_point && num<=ending_point){
-            console.log("Between the range");
-        }
-        else{
-            console.log("outside the range");
+    let list=[[22,0],[55,8],[85,0]];
+    let count=0;
+    for(let i=0;i<list.length;i++){
+        for(let j=0;j<list[i].length;j++){
+            if(list[i][j]==0){
+               count=count+1;
+            }
         }
     }
-    checkInRange(20,1,30);
+    console.log(count);
 </script>
 </html>

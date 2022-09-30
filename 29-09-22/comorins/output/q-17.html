@@ -10,15 +10,17 @@
     
 </body>
 <script>
-    function checkInRange(num,initial_point,ending_point){
-        
-        if(num>=initial_point && num<=ending_point){
-            console.log("Between the range");
-        }
-        else{
-            console.log("outside the range");
-        }
-    }
-    checkInRange(20,1,30);
+    function checkLeapYear(year) {
+
+if(year%4 == 0 && year%100 != 0 || year%400 == 0){
+  console.log("The given year is leap year");
+}
+else{
+  console.log("The given year is not a leap year");
+  }
+}
+checkLeapYear(2014);
+checkLeapYear(2000);
+checkLeapYear(1978);
 </script>
 </html>
