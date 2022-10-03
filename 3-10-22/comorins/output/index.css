@@ -1,0 +1,12 @@
+
+body{
+    background-color: lightgreen;
+}
+.todo-wrapper{
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+}
+p{
+    color: gray;
+}

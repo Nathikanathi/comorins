@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todo-input">
+        <h2>My-to-do-list</h2>
+        <p><i>Double-click an item to mark it complete</i></p>
+        <form>
+            <input type="text" id="input-box">
+            <button onclick="add" id="add-button">Add</button>
+        </form><br>
+        <ol id="items"></ol>
+       <div class="action-area">
+        <button id="clear-button">Clear Completed</button>
+        <button id="empty-button">Empty list</button>
+        <button id="save-button">Save list</button>
+       </div>
+    </div>
+</body>
+<script>
+    let addbutton=document.getElementById("add-button");
+    addbutton.addEventListener("click",addtodo);
+    function addtodo(){
+    alert("you click the add button");
+    }
+    let clearbutton=document.getElementById("clear-button");
+    clearbutton.addEventListener("click",cleartodo);
+    function cleartodo(){
+        alert("you click the clear completed button");
+    }
+    let emptybutton=document.getElementById("empty-button");
+    emptybutton.addEventListener("click",emptytodo);
+    function emptytodo(){
+        alert("you click the empty list button");
+    }
+    let savebutton=document.getElementById("save-button");
+    savebutton.addEventListener("click",savetodo);
+    function savetodo(){
+        alert("you click the save list button");
+    }
+    //let inputbox=document.getElementById("input-box");
+    let list=[];
+    function add(){
+        let inputbox=document.getElementById("input-box").value="";
+        list.push(inputbox);
+        display(list);
+    }
+    function display(array){
+        element="";
+        for(let i=0;i<array.length;i++){
+        element=element+"<ol>"+array[i]+"</ol>";
+        }
+    }
+</script>
+</html>
