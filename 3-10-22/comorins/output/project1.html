@@ -13,9 +13,9 @@
 </body>
 <script>
    // let list=[];
-   if(!localStorage.getItem("todos")){
-    localStorage.setItem("todos",JSON.stringify([]));
-   }
+   //if(!localStorage.getItem("todos")){
+   // localStorage.setItem("todos",JSON.stringify([]));
+   //}
     let list=JSON.parse(localStorage.getItem("todos"));
     function additem(){
         let list_array=document.getElementById("inputs").value;
@@ -27,11 +27,16 @@
         function display(){
             let element="";
             let local_list=JSON.parse(localStorage.getItem("todos"));
-            for(let i=0;i<list.length;i++){
-                element=element+"<li>"+list[i]+"</li>";
+            for(let i=0;i<local_list.length;i++){
+                element=element+"<li>"+local_list[i]+"</li>"+"<button onclick=removeitems(i)>remove</button>";
 
             }
             document.getElementById('list1').innerHTML=element;
+        }
+        function removeitems(position){
+            let new_list=JSON.parse(localStorage.getItem("todos"));
+            
+            localStorage.setItem("todos",JSON.stringify(new variable));
         }
 </script>
 </html>

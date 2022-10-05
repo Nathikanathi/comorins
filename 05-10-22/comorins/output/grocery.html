@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Shopping List</title>
+	<link rel="stylesheet" href="list.css">
+</head>
+<body>
+	<h1>Shopping List</h1>
+	
+	<label>Add Item: </label> 
+	<input type="text" id="items">
+	<button onclick="listAdd()">Need</button>
+	<ul id="needul"></ul>
+
+	
+</body>
+<script>
+	let array=[];
+		function listAdd() {
+			let list =document.getElementById("items").value;
+			array.push(list);
+			display(array);
+			document.getElementById("items").value=" ";
+			
+			
+			}
+		function display(list_array){
+			let grocery=" ";
+			
+			for (let i = 0; i <list_array.length; i++) {
+				grocery += "<li>" + list_array[i] + "</li>";
+			}
+			document.getElementById("needul").innerHTML=grocery;
+		}
+	
+</script>
+</html>

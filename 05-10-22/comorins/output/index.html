@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class User{
+   constructor(fname,age){
+     this.name=fname;
+     this.age=age;
+   }
+        add(){
+            return this.name+" "+this.age;
+            
+        }
+     nameAndAge(){
+       return this.add();
+     }
+       
+    }
+    let user_class_object=new User("nathika","20");
+   
+    console.log(user_class_object.add());
+    console.log(user_class_object.nameAndAge());
+  let date=new Date();
+ console.log(date);
+  console.log(date.getMonth());
+   console.log(date.getFullYear());
+   console.log(date.getDate());
+ console.log(date.getDay());
+  
+</script>
+</html>
