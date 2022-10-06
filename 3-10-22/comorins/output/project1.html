@@ -7,36 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-    <input id="inputs" type="text">
-    <button onclick="additem()">add</button>
-    <ol id="list1"></ol>
-</body>
-<script>
-   // let list=[];
-   //if(!localStorage.getItem("todos")){
-   // localStorage.setItem("todos",JSON.stringify([]));
-   //}
-    let list=JSON.parse(localStorage.getItem("todos"));
-    function additem(){
-        let list_array=document.getElementById("inputs").value;
-        list.push(list_array);
-        localStorage.setItem("todos",JSON.stringify(list));
-        display();
-        console.log(list);
+    <input id="num1" type="text" />
+    
+    <input  type="button" value="add" onclick="add()"/>
+    <ul id="todoo">
+       
+    </ul>
+    
+    <script>
+          if(!localStorage.getItem("todoo")){
+            localStorage.setItem("todoo",JSON.stringify([]));
+          }
+          let list=JSON.parse(localStorage.getItem("todoo"));
+        function add(){
+            let item=document.getElementById("num1").value;
+            list.push(item);
+            localStorage.setItem("todoo",JSON.stringify(list));
+            display();
+            document.getElementById("num1").value=" ";
         }
         function display(){
-            let element="";
-            let local_list=JSON.parse(localStorage.getItem("todos"));
+            let ele=" ";
+            let local_list=JSON.parse(localStorage.getItem("todoo"))
             for(let i=0;i<local_list.length;i++){
-                element=element+"<li>"+local_list[i]+"</li>"+"<button onclick=removeitems(i)>remove</button>";
-
+                ele=ele+"<li>"+local_list[i]+" "+"<button onclick='removeItem("+i+")'>delete</button>"+"</li>"
             }
-            document.getElementById('list1').innerHTML=element;
+            document.getElementById('todoo').innerHTML=ele;
         }
-        function removeitems(position){
-            let new_list=JSON.parse(localStorage.getItem("todos"));
-            
-            localStorage.setItem("todos",JSON.stringify(new variable));
-        }
-</script>
+       
+       function removeItem(position){
+        let list_new=JSON.parse(localStorage.getItem("todoo"));
+        list.splice(position,1);
+        console.log(list);
+        localStorage.setItem("todoo",JSON.stringify(list));
+        display();
+       }
+        display();
+    </script>
+</body>
 </html>

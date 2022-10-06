@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   name: <input onchange="addDetail(this.value)" type="text">
+
+</body>
+<script>
+    function addDetail(value){
+        alert(value);
+    }
+    let resume={
+        name:"Nathika",
+        email:"nathika10@gmail.com",
+        mobile_no:7896009710,
+        education_detail:[{
+            qualification:"10th",
+            institute:"Joseph's Convent HSC",
+            percentage:"90%",
+            year_of_passing:2011
+        },
+        {
+            qualification:"12th",
+            institute:"Joseph's Convent HSC",
+            percentage:"95%",
+            year_of_passing:2013
+        },
+        {
+            qualification:"BSc",
+            institute:"Joseph's Convent HSC",
+            percentage:"92%",
+            year_of_passing:2017
+        }],
+        certification:[{
+            course:"PGDCT",
+            duration:"6 months",
+            institute:"nite computer training"
+        },
+        {
+            course:"data science",
+            duration:"3 months",
+            institute:"veranda accaciya computer academy"
+        }
+        ],
+        project:[{
+            name_of_project:"blood bank management",
+            abstract:"donate blood"
+            },
+            {
+            name_of_project:"blood bank management",
+            abstract:"donate blood"
+        }
+        ],
+        skills:["html","css","php","oracle"],
+        experience:[
+            {
+                company:"MNC",
+                role_of_working:"testing",
+                experience:"2 Years"
+            },
+            {
+                company:"TCS",
+                role_of_working:"frontend developer",
+                experience:"3 Years"
+            },
+            {
+                company:"Wibro",
+                role_of_working:"backend developer",
+                experience:"1 Years"
+            }
+        ],
+        personal_detail:{
+            gender:"female",
+            D_O_B:"10-02-1997",
+            age:28,
+            marrital_status:"none",
+            father:"sekar",
+            mother:"anitha",
+
+        },
+        language_known:["tamil","english","hindi"]
+
+    }
+    console.log(resume);
+</script>
+</html>  

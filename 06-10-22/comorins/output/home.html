@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    name: <input onkeyup="addDetails('name',this.value)" type="text"><br>
+    email:<input onkeyup="addDetails('email',this.value)" type="email"><br>
+    mobile:<input onkeyup="addDetails('mobile_no',this.value)" type="number"><br>
+    skills: <input onkeyup="addDetails('skills',this.value,0)" type="text">
+            <input onkeyup="addDetails('skills',this.value,1)" type="text">
+            <input onkeyup="addDetails('skills',this.value,2)" type="text">
+    <h4>education:</h4>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>course</td>
+                <td>years</td>
+                <td>Institute</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,0,'qualification')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,0,'year')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,0,'Institute')"/></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,1,'qualification')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,1,'year')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,1,'Institute')"/></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,2,'qualification')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,2,'year')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,2,'Institute')"/></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,3,'qualification')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,3,'year')"/></td>
+                <td><input type="text" onkeyup="addDetails('education',this.value,3,'Institute')"/></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>certification:</h4>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>course</td>
+                <td>duration</td>
+                <td>institute</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,0,'course')"></td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,0,'duration')"></td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,0,'Institute')"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,1,'course')"></td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,1,'duration')"></td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,1,'Institute')"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,2,'course')"></td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,2,'duration')"></td>
+                <td><input type="text" onkeyup="addDetails('certification',this.value,2,'Institute')"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Project :</h4>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>title</td>
+                <td>duration</td>
+                <td>abstract</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,0,'title')"></td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,0,'duration')"></td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,0,'abstract')"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,1,'title')"></td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,1,'duration')"></td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,1,'abstract')"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,2,'title')"></td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,2,'duration')"></td>
+                <td><input type="text" onkeyup="addDetails('project',this.value,2,'abstract')"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Experience :</h4>
+    <table>
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>company</td>
+                <td>role_of_working</td>
+                <td>year of experience</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,0,'company')"></td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,0,'role')"></td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,0,'year')"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,1,'company')"></td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,1,'role')"></td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,1,'year')"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,2,'company')"></td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,2,'role')"></td>
+                <td><input type="text" onkeyup="addDetails('experience',this.value,2,'year')"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Personal Details</h4>
+    <label>gender</label><input onkeyup="addDetails('name',this.value)" type="text"><br>
+    <label>DOB</label><input onkeyup="addDetails('dob',this.value)" type="date"><br>
+    <label>age</label><input onkeyup="addDetails('age',this.value)" type="number"><br>
+    <label>Marrital Status</label><input onkeyup="addDetails('marriage',this.value)" type="text"><br>
+    <label>Father's Name :</label><input onkeyup="addDetails('father',this.value)" type="text"><br>
+    <label>Mother's Name</label><input onkeyup="addDetails('mother',this.value)" type="text"><br>
+    <label>Nationality</label><input onkeyup="addDetails('Nationality',this.value)" type="text"><br>
+    <h4>Language Known</h4>
+            <input onkeyup="addDetails('language_known',this.value,0)" type="text" value=" ">
+            <input onkeyup="addDetails('language_known',this.value,1)" type="text">
+            <input onkeyup="addDetails('language_known',this.value,2)" type="text">
+    <div>
+        <input type="button" value="submit">
+        <code id="object"></code>
+    </div>
+</body>
+<script>
+    let resume={
+        skills:[],
+        education:[],
+        certification:[],
+        project:[],
+        experience:[],
+        language_known:[]
+    };
+     function addDetails(key,value,index=null,obj_key=null){
+       // alert(value);
+       // resume.name=value;
+       if(index==null && obj_key==null){
+       resume[key]=value;
+        }
+        else if(obj_key==null){
+            resume[key][index]=value;
+        }
+        else{
+            if(!resume[key][index]){
+                resume[key][index]={};
+            }
+            resume[key][index][obj_key]=value;
+        }
+        display();
+    }
+    function display(){
+        document.getElementById("object").innerHTML=JSON.stringify(resume);
+    }
+    console.log(resume);
+</script>
+</html>
