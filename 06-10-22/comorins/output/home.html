@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-    name: <input onkeyup="addDetails('name',this.value)" type="text"><br>
-    email:<input onkeyup="addDetails('email',this.value)" type="email"><br>
-    mobile:<input onkeyup="addDetails('mobile_no',this.value)" type="number"><br>
+   <form>
+    <label>Name</label> <input onkeyup="addDetails('name',this.value)" type="text"><br><br>
+    <label>email:</label><input onkeyup="addDetails('email',this.value)" type="email"><br><br>
+    <label>mobile_no</label><input onkeyup="addDetails('mobile_no',this.value)" type="number"><br><br>
     skills: <input onkeyup="addDetails('skills',this.value,0)" type="text">
             <input onkeyup="addDetails('skills',this.value,1)" type="text">
             <input onkeyup="addDetails('skills',this.value,2)" type="text">
@@ -146,19 +146,23 @@
         </tbody>
     </table>
     <h4>Personal Details</h4>
-    <label>gender</label><input onkeyup="addDetails('name',this.value)" type="text"><br>
-    <label>DOB</label><input onkeyup="addDetails('dob',this.value)" type="date"><br>
-    <label>age</label><input onkeyup="addDetails('age',this.value)" type="number"><br>
-    <label>Marrital Status</label><input onkeyup="addDetails('marriage',this.value)" type="text"><br>
+    <label>gender:</label><input onkeyup="addDetails('gender',this.value)" type="text"><br>
+    <label>DOB:</label><input onkeyup="addDetails('dob',this.value)" type="date"><br>
+    <label>age:</label><input onkeyup="addDetails('age',this.value)" type="number"><br>
+    <label>Marrital Status:</label><input onkeyup="addDetails('marriage',this.value)" type="text"><br>
     <label>Father's Name :</label><input onkeyup="addDetails('father',this.value)" type="text"><br>
     <label>Mother's Name</label><input onkeyup="addDetails('mother',this.value)" type="text"><br>
+    <label>address</label><textarea onkeyup="addDetails('address',this.value)" cols="25" rows="2"></textarea><br>
     <label>Nationality</label><input onkeyup="addDetails('Nationality',this.value)" type="text"><br>
     <h4>Language Known</h4>
-            <input onkeyup="addDetails('language_known',this.value,0)" type="text" value=" ">
+            <input onkeyup="addDetails('language_known',this.value,0)" type="text">
             <input onkeyup="addDetails('language_known',this.value,1)" type="text">
             <input onkeyup="addDetails('language_known',this.value,2)" type="text">
+   </form>
+            <button onclick="display()">submit</button>
+            <ul id="list"></ul>
+   
     <div>
-        <input type="button" value="submit">
         <code id="object"></code>
     </div>
 </body>
@@ -186,11 +190,37 @@
             }
             resume[key][index][obj_key]=value;
         }
-        display();
+        
     }
     function display(){
-        document.getElementById("object").innerHTML=JSON.stringify(resume);
+    document.getElementById("object").innerHTML=JSON.stringify(resume);
+    
+    if(!localStorage.getItem("resumedata")){
+        localStorage.setItem("resumedata",JSON.stringify([]))
     }
-    console.log(resume);
+    
+    let list_1=JSON.parse(localStorage.getItem("resumedata"));
+    list_1.push(resume);
+
+    localStorage.setItem("resumedata",JSON.stringify(list_1))
+    namedisplay();
+   }
+   namedisplay();
+   function namedisplay(){
+    let element=" ";
+    let resumename=JSON.parse(localStorage.getItem("resumedata"));
+    for(let i=0;i<resumename.length;i++){
+        element=element+"<li> <a href='view.html?name="+resumename[i].name +"'target='_blank'>"+resumename[i].name+"</a></li>"
+    }
+    document.getElementById("list").innerHTML=element;
+   }
+   // console.log(resume);
+    /*function display(){
+        
+        document.getElementById("object").innerHTML=JSON.stringify(resume);
+        localStorage.setItem("object",JSON.stringify([resume]));
+    }*/
 </script>
 </html>
+
+
