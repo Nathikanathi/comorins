@@ -204,13 +204,13 @@
 
     localStorage.setItem("resumedata",JSON.stringify(list_1))
     namedisplay();
-   }
+   }    
    namedisplay();
    function namedisplay(){
     let element=" ";
     let resumename=JSON.parse(localStorage.getItem("resumedata"));
     for(let i=0;i<resumename.length;i++){
-        element=element+"<li> <a href='view.html?name="+resumename[i].name +"'target='_blank'>"+resumename[i].name+"</a></li>"
+        element=element+"<li> <a href=view.html?name="+resumename[i].name +"target='_blank'>"+resumename[i].name+"</a></li>"
     }
     document.getElementById("list").innerHTML=element;
    }

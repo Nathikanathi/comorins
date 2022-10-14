@@ -173,9 +173,44 @@
     </div>
 </body>
 <script>
+  let selected=JSON.parse(localStorage.getItem("resumedata"))
     const queryString= window.location.search;
     const urlParams= new URLSearchParams(queryString);
     const product= urlParams.get('name');
     alert(product);
+
+    for(let i=0;i<selected.length;i++){
+    if(product==selected[i].name){
+      document.getElementById("name").textContent=selected[i].name;
+      document.getElementById("email").textContent=selected[i].email;
+      document.getElementById("mobile_no").textContent=selected[i].mobile_no;
+      
+
+      let personal_details=selected[i].personal_details;
+      document.getElementById("fname").textContent=personal_details.fname;
+      document.getElementById("mname").textContent=personal_details.mname;
+      document.getElementById("address").textContent=personal_details.address;
+      document.getElementById("dob").textContent=personal_details.dob;
+      document.getElementById("gender").textContent=personal_details.gender;
+      document.getElementById("nationality").textContent=personal_details.nationality;
+      document.getElementById("language").textContent=selected[i].language;
+
+      let educationDetails=selected[i].education;
+      for(let i=0;i<educationDetails.length;i++){
+        document.getElementById("course"+i).textContent=educationDetails[i].course;
+        document.getElementById("year"+i).textContent=educationDetails[i].year;
+        document.getElementById("institute"+i).textContent=educationDetails[i].institute;
+        document.getElementById("percentage"+i).textContent=educationDetails[i].percentage;
+
+        let projectDetails=selected[i].project;
+      for(let i=0;i<projectDetails.length;i++){
+        document.getElementById("course"+i).textContent=projectDetails[i].course;
+        document.getElementById("abstract"+i).textContent=projectDetails[i].year;
+        document.getElementById("duriation"+i).textContent=projectDetails[i].institute;
+      
+      }
+    }
+  }
+}
 </script>
 </html>
