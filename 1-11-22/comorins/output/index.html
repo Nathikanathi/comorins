@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+    <h1 >nathika is a good one</h1>
+    <p>enjoy your life</p>
+    </div>
+    <button >click</button>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                //$(".main").hide();
+               // $(".main").html(`<h5>she is cute!</h5>`);
+               //$(".main h1").css("color","blue");
+              // $("#main h1").toggleClass("active");
+            //   $("button").on("click",function(){
+                 $("#main h1").toggleClass("active");
+               })
+           // })
+           $("p").on({
+            click:function(){
+                $(this).css("background","pink");
+                },
+                mouseenter:function(){
+                    $(this).css("background","red");
+                },
+                mouseleave:function(){
+                    $(this).css("background","none");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

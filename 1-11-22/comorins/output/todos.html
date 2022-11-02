@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        
+    </div>
+    <button>click</button>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url:"https://dummyjson.com/todos",
+                    success:function(data){
+                        let ele="";
+                        for(let i=0;i<data.length;i++){
+                            ele+="<div class='card text-white bg-primary mb-3' style='max-width: 18rem;'><div class='card-header'>"+data[i].id+"</div><div class='card-body'><h5 class='card-title'>"+data[i].todo+"</h5><p class='card-text'>"+data[i].completed+"</p><p class='card-text'>"+data[i].userId+"</p></div></div>";
+                        }
+                        $("#main").append(ele);
+                    }
+                })
+            })
+        })
+    </script> 
+</body>
+</html>

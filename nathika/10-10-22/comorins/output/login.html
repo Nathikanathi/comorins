@@ -55,7 +55,7 @@
 			<div class="agileits-top">
 				<form action="#" method="post">
 					<input class="text" onkeyup="save('name',this.value)" type="text" id="Username" placeholder="Username" required="">
-					<input class="email" onkeyup="save('email',this.value)"  type="email"id="email" placeholder="Email" required="">
+					<input class="text email" onkeyup="save('email',this.value)"  type="email"id="email" placeholder="Email" required="">
 					<input class="text" onkeyup="save('password',this.value)"  type="password"id="password" placeholder="Password" required="">
 	
 					<div class="wthree-text">
@@ -91,17 +91,21 @@
 	<!-- //main -->
 </body>
 <script>
-	let userlogin={};
-    function save(key,value){
-     	userlogin[key]=value;
-	}
+	 let userlogin={};
+   function save(key,value){
+     userlogin[key]=value;
+
+    
+}
 function store(){
         if(!localStorage.getItem("user_details")){
             localStorage.setItem("user_details",JSON.stringify([]))
-		}
+
+        }
         userdata=JSON.parse(localStorage.getItem("user_details"));
         userdata.push(userlogin);
         localStorage.setItem("user_details",JSON.stringify(userdata));
+
 }
 </script>
-</html> 
+</html>

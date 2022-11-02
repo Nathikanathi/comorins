@@ -291,12 +291,10 @@ if(! localStorage.getItem("flipkart")){
 
   
  
-
-
 function returnCards() {
   let product_section="";
     for(let i=0; i<products.length; i++){
-      product_section+= ` <div class=\"card-item\ text-center col-3">
+      product_section+=  ` <div class=\"card-item\ text-center col-3">
    
       <div class="product-header">
       <a href="view.html?product_name=${products[i].product_name}"><img src="${products[i].img}"/></a>
@@ -311,25 +309,15 @@ function returnCards() {
     } document.getElementById("product_section").innerHTML=product_section;
  
   }
-
   returnCards();
   
-    let logins=JSON.parse(localStorage.getItem("login")); 
-    let user=JSON.parse(localStorage.getItem("user_details"));
-    let ele="";
-      if(localStorage.getItem("login")){
-        ele="<button id='home' onclick="+logout()+" class='login_button'>log out</button>"
-        document.getElementById("homepage").innerHTML=ele;
-        
-      }
+  if(localStorage.getItem("login")){
+    document.getElementById("l_out").innerHTML="<a onclick='logout()'>Logout</a>";
+
+  }
 
   function logout(){
     localStorage.removeItem("login")
+    window.location.href="index.html";
   }
- 
-function log_in(){
-  window.location.href="login_page.html";
-}
-  
 
- 

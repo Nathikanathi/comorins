@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main">
+
+    </div>
+    <button>click</button>
+    <code id="obj"></code>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url:"https://jsonplaceholder.typicode.com/posts/",
+                    success:function(getData){
+                        //console.log(getData);
+                       //$("#obj").html(JSON.stringify(getData));
+                       let element="";
+                       for(let i=0;i<getData.length;i++){
+                           element+="<div class='card text-white bg-primary mb-3' style='max-width: 18rem;'><div class='card-header'>"+getData[i].id+"</div><div class='card-body'><h5 class='card-title'>"+getData[i].title+"</h5><p class='card-text'>"+getData[i].body+"</p></div></div>"
+                        }
+                       $("#main").append(element);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>  

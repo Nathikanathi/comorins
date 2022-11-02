@@ -55,20 +55,16 @@
       let element="";
       let total=0;
       let deli="";
-      let count=0;
-      //console.log(cart)
+      console.log(cart)
       for(let i=0;i<cart.length;i++){
-        element+= "<div class='card mb-3' style='max-width: 540px;'><div class='row no-gutters'> <div class='col-md-4'><img class='kartimg' src='"+cart[i].img+"'></div><div class='col-md-8'><div class='card-body'><h5 class='card-title'>"+cart[i].p_name+"</h5><p class='card-text'>"+cart[i].price+"</p><p class='card-text'><small class='text-muted'>"+cart[i].Delivery+"</small></p><button type='button' onclick='remove("+i+")' class='click btn btn-danger'>Remove</button><a href='placeorder.html' class='click btn btn-success'>place order</a></div></div></div></div>";
-        deli=cart[i].Delivery;
-        total+=parseInt(cart[i].price);
-        count++;
+        element+= "<div class='card mb-3' style='max-width: 540px;'><div class='row no-gutters'> <div class='col-md-4'><img class='kartimg' src='"+cart[i].img+"'></div><div class='col-md-8'><div class='card-body'><h5 class='card-title'>"+cart[i].p_name+"</h5><p class='card-text'>"+cart[i].size+"</p><p class='card-text'><small class='text-muted'>"+cart[i].Delivery+"</small></p><button type='button' onclick='remove("+i+")' class='click btn btn-danger'>Remove</button><a href='placeorder.html' class='click btn btn-success'>place order</a></div></div></div></div>";
+        deli+=cart[i].Delivery;
+        total+=parseInt(cart[i].price)
       
-    }  
-    //console.log(element);
+    }  console.log(element);
     document.getElementById("cartDiv").innerHTML=element;
     document.getElementById("deliver").innerHTML=deli;
    document.getElementById("tot").innerHTML=total;
-   document.getElementById("number").innerHTML=count;
   }
   display();
   function remove(i){
