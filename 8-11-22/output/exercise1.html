@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        //part1 
+        //exercise:1
+        let company=[{company_name:"wibro",c_start:1925,category:"retail",end:1980},
+                     {company_name:"apple",c_start:1976,category:"finance",end:1992},
+                     {company_name:"vivo",c_start:2007,category:"retail",end:2021},
+                     {company_name:"oppo",c_start:2009,category:"softwear",end:2020}];
+        
+        let companyName=(items) => {
+           return console.log(items.company_name);
+        }
+        company.forEach(companyName);
+        
+        //exercise:2
+        let begins=company.filter(function get(com){
+            return com.c_start>1987;
+        });
+        console.log(begins);
+        let c_name=begins.map( (com) =>{
+            return com.company_name;
+        })
+        console.log(c_name);
+
+        //exercise :3
+        let retail=company.filter( (data) => data.category=="retail");
+        let re=retail.map(val => {
+            let ele=""
+            return val.c_start+1;
+            })
+        console.log(retail);
+        console.log(re);
+
+        //exercise:4
+        let getCompanyName=company.sort( (a,b) => {
+            c=a.end;
+            d=b.end;
+            return c-d;
+        } );
+        //console.log(getCompanyName);
+        let f=getCompanyName.map( (data) => {
+            return data.company_name;
+        });
+        console.log(f);
+
+        //exercise :5
+
+        let ages=[56,2,72,33,80,48,45,91];
+        let sortedAge=ages.sort( (a,b) => b-a );
+        console.log(sortedAge);
+
+        //exercise:6
+
+        let sum=ages.reduce( (a,b) => a+b);
+        console.log(sum);
+
+        //exercise:7
+        let obj = () =>{
+            return {
+            'name' : "comorins",
+            'category' : "softwear"
+            }
+        } 
+        let {name,category} = obj() ;
+        console.log(name) ; 
+        
+        //exercise :8
+        
+        let add = (...val) => {
+            let sum=0;
+            for(let a of val){
+                sum+=a;
+            }
+            return sum;
+        }
+        console.log(add(2,2,2));
+
+        //exercise :9
+        //exercise :10
+
+        let person={
+            person_name:"nathika",
+            age:"20",
+            address:{
+                door_no:"2/98",
+                street:"kamaraj street",
+                place:"krishnankovil",
+                city:"nagercoil",
+                district:"kanyakumari"
+            }
+        }
+        let {person_name,age,address:{door_no,street,place,city,district}} = person;
+        console.log(street);
+
+        //exercise :11
+
+        let val=0;
+        let num=() => val++;
+        console.log(num());
+        console.log(num());
+        console.log(num());
+
+        //part :2
+        //exercise :1
+
+        let join=(a,b=a+1)=>a+b;
+            console.log(join(2,3));
+            console.log(join(5));
+
+        //exercise :2
+        //exercise :3
+        
+        let object1={
+                    company:"comorins",
+                    start:"2012"
+                    } 
+        let object2={
+                    company:"wibro",
+                    start:"2012"
+                    }
+        let same=(obj1,obj2)=>{
+            for(let x in obj1){
+                    if(obj1[x]==obj2[x]){
+                    return true;
+                    }
+                    else{
+                        return false;
+                    }
+                } 
+            }  
+        console.log(same(object1,object2));
+        //exercise :4
+        let x=[87,56,2,9,1,78,42,21]
+        let y=[];
+        let filt=value =>{
+        return value>40 ? true:false;
+        }
+        x.forEach(value =>{
+        filt(value)==false?y.push(value):console.log();
+        })
+        console.log(y);
+        
+        //exercise :5
+         let check=(x) => {
+            x==null || x==undefined?console.log("what it is"):console.log(`${typeof(x)}`);
+         }
+        let n;
+        check(2);
+        check(n);
+        check("nathi");
+
+        //exercise :6
+        let my_object={
+        emp_name:"nathika",
+        emp_details:{
+            father_name:"sekar",
+            mother_name:"anitha",
+            address:{
+                        emp_door_no:"2/98",
+                        emp_street:"kamaraj street",
+                        emp_place:"krishnankovil",
+                        emp_city:"nagercoil",
+                        emp_district:"kanyakumari"
+                    } ,      
+                }
+            }
+let {emp_name,emp_details:{father_name,mother_name,address:{  emp_door_no, emp_street, emp_place, emp_city, emp_district}}} =my_object;
+console.log(emp_city);
+        //part :3
+        //exercise :1
+
+        let user_detail={
+                        name:"nathi",
+                        place:"thellanhi",
+                        age:9
+                        }
+        for(let x in user_detail){
+        console.log(`${x}:${user_detail[x]}`)
+        }
+        //exercise :2
+        //exercise :3
+        console.warn('please update yourbrowser' );
+        
+        //exercise :4
+        console.error("invalid passord");
+
+        //exercise :6
+        try{
+            let chars = [4,3,5,5,8,9,5,4];
+            let unique = chars.filter((s, i) => chars.indexOf(s) == i);
+            console.log(unique);
+            }
+            catch(error){
+                console.log(error);
+            }
+
+        //exercise :7
+        switch (new Date().getDay()) {
+        case 0:
+            console.log("Sunday");
+            break;
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        case 4:
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+        }
+
+        //exercise :9
+        let array = [10, 11, 3, 20, 5];
+        let array_find=array.find(b=>b>10);
+        let array_includes = array.includes(20);
+        let array_filter=array.filter(a => a<10);
+        let array_indexOf=array.indexOf(20);
+        console.log(array_filter);
+        console.log(array_find);
+        console.log(array_indexOf);
+        console.log(array_includes);
+
+        //part :4
+        //exercise :1
+        let chars = [4,3,5,5,8,9,5,4];
+        let unique = chars.filter((s, i) => chars.indexOf(s) == i);
+        console.log(unique);
+
+        //exercise :4
+        let numbers = [25, 50, 75];
+        let lessThan50 = numbers.filter((num) => {
+        return num > 50;
+        });
+        console.log(lessThan50);
+
+        //part :5
+        //exercise :1
+        let n1=[20,7,45,66,2,1],
+            n2=[77,56,4,3,9,0];
+        let n3=[...n1,...n2];
+        let min=Math.min(...n3);
+        let max=Math.max(...n3);
+        console.log(n3);
+        console.log(max);
+        console.log(min);
+        
+        //exercise :2
+        let fisher_mans_detail=[
+         {name:"Krishna",score:20},
+         {name:"Kanna",score:76},
+         {name:"Govinthar",score:890},
+         {name:"Neelakanda",score:200}];
+            let fishers=fisher_mans_detail.map(mark => mark.score);
+            //let total=fishers.reduce((a,b) => a+b);
+            let avg=fishers.reduce((a,b) => a+b)/fishers.length;
+            console.log(avg);
+            let getFisher=fisher_mans_detail.filter(a => a.score>100);
+            let print=getFisher.map(a => a.name);
+            console.log(print);
+
+        //exercise :3
+        let my_string = "nathika10 nathi2002";
+        let only_numbers = my_string.match(/\d+/g).map(Number);
+        console.log(only_numbers);    
+        
+        //exercise :4
+        let check_positive=[2,-1,8,9,-8];
+        let check_function= s =>{
+        return s>=0?console.log("values is positive"):console.log("value is negative");
+        }
+        check_function(check_positive);
+        
+        //exercise :5
+        let con=(a,b)=>{
+        return  (a>0 && b>0)?console.log("passitive"):(a>0 || b>0)?console.log("one is negative"):console.log("both are negative");
+        }
+        con(6,-80);
+        con(-6,-80);
+        con(6,80);
+    </script>
+</body>
+</html>  

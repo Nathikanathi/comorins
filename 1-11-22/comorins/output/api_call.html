@@ -159,10 +159,19 @@
                 <input onkeyup="addDetails('language_known',this.value,2)" type="text">
        </form>
                 <button id="main">submit</button>
-               <button id="sub">get data</button>
-               <button id="remove">delete</button>
-               <button id="sub2">data by id</button>
-       
+                <!-- <button id="move">remove</button> -->
+        <table id="user">
+            <thead>
+                <tr>
+                    <th>SNo</th>
+                    <th>id</th>
+                    <th>name</th>
+                    </tr>
+            </thead>
+           <tbody id="user1">
+
+           </tbody>
+        </table>
         <div>
             <code id="object"></code>
         </div>
@@ -192,10 +201,31 @@
         
     }
 
-
-
-
         $(document).ready(function(){
+            function view(){
+                $.ajax({
+                    type:"get",
+                    url:"http://karka.academy/api/action.php",
+                    data:{
+                        request:"get_user_resume",
+                        user:"natthiy"
+                    },
+                    success:function(items){
+                    let add=JSON.parse(items).data;
+                    $("#user1").html(``)
+                    //let value=add.data;
+                    let ele="";
+                    for(let i=0;i<add.length;i++){
+                    let obj=JSON.parse(add[i].data);
+                    console.log(obj)
+                     ele+="<tr><td>"+i+"</td><td>"+add[i].id+"</td><td>"+obj.name+"</td><td><button id='del' value="+add[i].id+">delete</button></td></td><td><button><a href=view.html?id="+add[i].id+">view</a></button></td></tr>";
+                    
+                    }
+                    $("#user1").html(ele);  
+                    },
+                });
+            }
+           view();
             $("#main").click(function(){
                 $.ajax({
                     type :"post",
@@ -203,48 +233,58 @@
             
                     data:{
                     request : "create_resume",
-                    user: "nathika",
+                    user: "natthiy",
                     resume:user_detail
                     },
-                    success:function(data){
-                        console.log(data);
+                    success:function(items){
+                        view();
+                        console.log(items);
+                    },
+                    error:function(){
+                        console.log("failed");
                     }
                 });
+                
             });
-            $("#sub").click(function(){
+            
+            $(document).on("click","#del",function(){
+                let val=$(this).val();
                 $.ajax({
                     type:"get",
                     url:"http://karka.academy/api/action.php",
                     data:{
-                        request:"get_user_resume",
-                        user:"nathika"
-                    }
-                })
-            });
-            $("#remove").click(function(){
-                $.ajax({
-                type:"get",
-                url:"http://karka.academy/api/action.php",
-                data :{
-                        request : "delete_user_resume",
-                        user : "nathika",
-                        id:"332"
-                      }
-                });
-            });
-            $("#sub2").click(function(){
-                $.ajax({
-                    type:"get",
-                    url:"http://karka.academy/api/action.php",
-                    data:{
-                        request:"get_resume_by_id",
-                        user:"nathika",
-                        id:"286"
-                    }
-                })
+                            request:"delete_user_resume",
+                            user:"natthiy",
+                            id:val
+                        },
+                    success:function(items){
+                        view();
+                        console.log(items);
+                    },
             })
-        
+
+            })
+            // $("#move").click(function(){
+            //     $.ajax({
+            //         type:"get",
+            //         url:"http://karka.academy/api/action.php",
+            //         data:{
+            //                 request:"delete_user_resume",
+            //                 user:"natthiy",
+            //                 id:1388
+            //             },
+            //         success:function(items){
+            //             //view();
+            //             console.log(items);
+            //         },
+            // })
+
+            //  })
+            
+           
         });
+          
+        
     </script>
 </body>
-</html>  
+</html>   

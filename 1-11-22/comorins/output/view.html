@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="container">
-    <label id="name">Name :</label><br>
-    <label>Email :</label><br>
-    <label>Mobile_no :</label><br>
-    <label>Skills :</label><br>
+    <label >Name :</label><label id="name"></label><br>
+    <label>Email :</label><label id="email"></label><br>
+    <label>Mobile_no :</label><label id="mobile_no"></label><br>
+    <label>Skills :</label><label id="skill"></label><br>
     <h3>Education</h3>
     <table class="table table-striped">
         <thead>
@@ -161,56 +161,54 @@
             </tr>
           </tbody>
         </table>
-        <h3>Personal Details</h3>
-    <label>Gender:</label><br>
-    <label>DOB :</label><br>
-    <label>Age :</label><br>
-    <label>Marrital Status:</label><br>
-    <label>Father's Name :</label><br>
-    <label>Mother's Name</label><br>
-    <label>address</label><br>
-    <label>Nationality</label><br>
+    <h3>Personal Details</h3>
+    <label>Gender  :</label><label id="gender"></label><br>
+    <label>DOB :</label><label id="birth"></label><br>
+    <label>Age :</label><label id="age"></label><br>
+    <label>Marrital Status :</label><label id="marrital"></label><br>
+    <label>Father's Name :</label><label id="f_name"></label><br>
+    <label>Mother's Name :</label><label id="m_name"></label><br>
+    <label>address :</label><label id="address"></label><br>
+    <label>Nationality :</label><label id="nationality"></label><br>
+    <label>Language :</label><ul id="language"></ul><br>
     </div>
-</body>
-<script>
-  let selected=JSON.parse(localStorage.getItem("resumedata"))
-    const queryString= window.location.search;
-    const urlParams= new URLSearchParams(queryString);
-    const product= urlParams.get('name');
-    alert(product);
-  console.log(selected);
-    for(let i=0;i<selected.length;i++){
-    if(product==selected[i].name){
-      document.getElementById("name").textContent=selected[i].name;
-      document.getElementById("email").textContent=selected[i].email;
-      document.getElementById("mobile_no").textContent=selected[i].mobile_no;
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      const queryString= window.location.search;
+      const urlParams= new URLSearchParams(queryString);
+      const product= urlParams.get('id');
+      $(document).ready(function(){
+        $.ajax({
+                    type:"get",
+                    url:"http://karka.academy/api/action.php",
+                    data:{
+                        request:"get_resume_by_id",
+                        user:"natthiy",
+                        id:product
+                    },
+                    success:function(items){
+                      console.log(items)
+                      let menu=JSON.parse(items).data;
+                      let arr=JSON.parse(menu.data) ;
+                      $("#name").html(arr.name);
+                      $("#email").html(arr.email);
+                      $("#mobile_no").html(arr.mobile_no);
+                      $("#gender").html(arr.gender);
+                      $("#birth").html(arr.dob);
+                      $("#age").html(arr.age);
+                      $("#marrital").html(arr.marriage);
+                      $("#f_name").html(arr.father);
+                      $("#m_name").html(arr.mother);
+                      $("#address").html(arr.address);
+                      $("#nationality").html(arr.Nationality);
+                        console.log(arr);
+                        console.log(arr.skills);
+                      for(let i=0;i<arr.skills;i++){
+                        $("#skill").html(arr.skills[i]);
+                      }
+                    }
+                })
+      })
       
-
-      let personal_details=selected[i].personal_details;
-      document.getElementById("fname").textContent=personal_details.fname;
-      document.getElementById("mname").textContent=personal_details.mname;
-      document.getElementById("address").textContent=personal_details.address;
-      document.getElementById("dob").textContent=personal_details.dob;
-      document.getElementById("gender").textContent=personal_details.gender;
-      document.getElementById("nationality").textContent=personal_details.nationality;
-      document.getElementById("language").textContent=selected[i].language;
-
-      let educationDetails=selected[i].education;
-      for(let i=0;i<educationDetails.length;i++){
-        document.getElementById("course"+i).textContent=educationDetails[i].course;
-        document.getElementById("year"+i).textContent=educationDetails[i].year;
-        document.getElementById("institute"+i).textContent=educationDetails[i].institute;
-        document.getElementById("percentage"+i).textContent=educationDetails[i].percentage;
-
-        let projectDetails=selected[i].project;
-      for(let i=0;i<projectDetails.length;i++){
-        document.getElementById("course"+i).textContent=projectDetails[i].course;
-        document.getElementById("abstract"+i).textContent=projectDetails[i].year;
-        document.getElementById("duriation"+i).textContent=projectDetails[i].institute;
-      
-      }
-    }
-  }
-}
-</script>
-</html>
+    </script>
+</body>    
